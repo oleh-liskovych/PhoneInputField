@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/phone_field_padding">
+
+        <AutoCompleteTextView
+            android:id="@+id/textview"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="7dp"
+            android:hint="@string/phone_field_hint"
+            android:maxLines="1"
+            android:completionThreshold="1"
+            android:inputType="phone" />
+
+        <ImageView
+            android:id="@+id/flag_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/phone_field_flag_icon"
+            tools:src="@drawable/flag_ac" />
+    </LinearLayout>
+</layout>

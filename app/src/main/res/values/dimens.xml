@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="phone_field_padding">10dp</dimen>
+    <dimen name="phone_field_flag_icon_size">25dp</dimen>
+    <dimen name="phone_field_text_size">18sp</dimen>
+
+    <dimen name="phone_field_dropdown_padding">5dp</dimen>
+    <dimen name="phone_field_dropdown_item_flag_icon_size">17dp</dimen>
+</resources>
