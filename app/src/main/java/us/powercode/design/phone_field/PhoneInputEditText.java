@@ -59,7 +59,7 @@ public class PhoneInputEditText extends LinearLayout implements BasePhoneFieldAd
 //        setupAdapter(context);
 
     }
-    
+
     private void getAttrs(Context context, AttributeSet attrs) {
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.PhoneInputEditText, 0, 0);
         try {
