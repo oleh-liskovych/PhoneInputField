@@ -10,6 +10,7 @@ import android.support.annotation.NonNull;
 import android.telephony.PhoneNumberFormattingTextWatcher;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 
@@ -58,18 +59,23 @@ public class PhoneInputEditText extends LinearLayout implements BasePhoneFieldAd
 //        setupAdapter(context);
 
     }
-
+    
     private void getAttrs(Context context, AttributeSet attrs) {
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.PhoneInputEditText, 0, 0);
         try {
             setHint(array.getString(R.styleable.PhoneInputEditText_android_hint));
             setText(array.getString(R.styleable.PhoneInputEditText_android_text));
+            setTextSize(array.getString(R.styleable.PhoneInputEditText_android_textSize));
             boolean iconIsVisible = (array.getBoolean(R.styleable.PhoneInputEditText_flag_is_visible, true));
 
             showFlagIcon(iconIsVisible);
         } finally {
             array.recycle();
         }
+    }
+
+    public static int spToPx(float sp, Context context) {
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, sp, context.getResources().getDisplayMetrics());
     }
 
     public void showFlagIcon(boolean showIcon) {
@@ -92,6 +98,17 @@ public class PhoneInputEditText extends LinearLayout implements BasePhoneFieldAd
     }
     public void setText(CharSequence text) {
         binding.textview.setText(text);
+    }
+
+    public void setTextSize(String rawSize) {
+        if (rawSize == null) return;
+        String temp = rawSize.replaceAll("[^0-9.]", ""); // "(?:sp|dp|dip)"
+        float size = Float.parseFloat(temp);
+        binding.textview.setTextSize(size);
+    }
+
+    public void setTextSize(int size) {
+        binding.textview.setTextSize(size);
     }
 
     public CharSequence getHint() {

@@ -3,6 +3,7 @@
     <declare-styleable name="PhoneInputEditText">
         <attr name="android:hint"/>
         <attr name="android:text"/>
+        <attr name="android:textSize"/>
         <attr name="flag_is_visible" format="boolean"/>
     </declare-styleable>
 </resources>
