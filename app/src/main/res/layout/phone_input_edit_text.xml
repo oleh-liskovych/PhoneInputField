@@ -23,7 +23,7 @@
 
         <ImageView
             android:id="@+id/flag_icon"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/phone_field_flag_icon_size"
             android:layout_height="match_parent"
             android:contentDescription="@string/phone_field_flag_icon"
             tools:src="@drawable/flag_ac" />

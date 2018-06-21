@@ -27,7 +27,7 @@
         <us.powercode.design.phone_field.PhoneInputEditText
             android:id="@+id/phone_field"
             android:layout_width="match_parent"
-            app:flag_is_visible="false"
+            app:flag_is_visible="true"
             android:hint="+9315"
             android:layout_height="wrap_content" />
 

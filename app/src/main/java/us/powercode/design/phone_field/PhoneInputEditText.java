@@ -63,6 +63,7 @@ public class PhoneInputEditText extends LinearLayout implements BasePhoneFieldAd
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.PhoneInputEditText, 0, 0);
         try {
             setHint(array.getString(R.styleable.PhoneInputEditText_android_hint));
+            setText(array.getString(R.styleable.PhoneInputEditText_android_text));
             boolean iconIsVisible = (array.getBoolean(R.styleable.PhoneInputEditText_flag_is_visible, true));
 
             showFlagIcon(iconIsVisible);
@@ -88,6 +89,9 @@ public class PhoneInputEditText extends LinearLayout implements BasePhoneFieldAd
 
     public void setHint(CharSequence hint) {
         binding.textview.setHint(hint);
+    }
+    public void setText(CharSequence text) {
+        binding.textview.setText(text);
     }
 
     public CharSequence getHint() {
