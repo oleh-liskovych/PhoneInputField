@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <import type="us.powercode.design.phone_field.phones_utils.PhonesInfoDataSource"/>
+        <import type="zp.olehliskovych.phoneinput.phone_field.phones_utils.PhonesInfoDataSource"/>
         <variable
             name="phonesSource"
             type="PhonesInfoDataSource"/>
@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-        <us.powercode.design.phone_field.PhoneInputEditText
+        <zp.olehliskovych.phoneinput.phone_field.PhoneInputEditText
             android:id="@+id/phone_field"
             android:layout_width="match_parent"
             app:flag_is_visible="true"
